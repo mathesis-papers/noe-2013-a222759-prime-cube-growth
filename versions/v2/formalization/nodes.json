@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:noe-2013-a222759-prime-cube-growth:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "3d781ae04219d5c99e87e82e3bbc3f6816e3691e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean"
+      },
+      "lineage": "collected:noe-2013-a222759-prime-cube-growth:s1",
+      "macros": {
+        "\\binrem": "\\left[\\binom{#1#2}{#2}\\right]_{#2^{#3}}",
+        "\\ind": "\\mathbf 1",
+        "\\pr": "\\mathbb P"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "noe-2013-a222759-prime-cube-growth",
+      "scope": "in_scope",
+      "statement": "For every integer $n\\ge1$, the following disjoint union is exact:\n\\begin{equation}\n W(n)=\\{p\\in\\pr:p^3\\le n\\}\\ \\dot\\cup\\ E_2(n)\\ \\dot\\cup\\ E_3(n).\n\\end{equation}\nIn particular,\n\\begin{equation}\n a(n)=\\pi(\\lfloor n^{1/3}\\rfloor)\n +\\ind_{\\{n<8,\\ n\\bmod4\\in\\{2,3\\}\\}}\n +\\ind_{\\{n<27,\\ n\\bmod3=2\\}}.\n\\end{equation}\nThus $a(n)=\\pi(\\lfloor n^{1/3}\\rfloor)$ for every $n\\ge27$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+      "toolchain": null,
+      "version": 2,
+      "work": "noe-2013-a222759-prime-cube-growth"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:noe-2013-a222759-prime-cube-growth:2:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "3d781ae04219d5c99e87e82e3bbc3f6816e3691e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean"
+      },
+      "lineage": "collected:noe-2013-a222759-prime-cube-growth:s2",
+      "macros": {
+        "\\binrem": "\\left[\\binom{#1#2}{#2}\\right]_{#2^{#3}}",
+        "\\ind": "\\mathbf 1",
+        "\\pr": "\\mathbb P"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "noe-2013-a222759-prime-cube-growth",
+      "scope": "in_scope",
+      "statement": "For every prime $p\\ge5$ and integer $n\\ge1$,\n$\\binom{np}{p}\\equiv n\\pmod{p^3}$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+      "toolchain": null,
+      "version": 2,
+      "work": "noe-2013-a222759-prime-cube-growth"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:noe-2013-a222759-prime-cube-growth:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "3d781ae04219d5c99e87e82e3bbc3f6816e3691e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean"
+      },
+      "lineage": "collected:noe-2013-a222759-prime-cube-growth:s3",
+      "macros": {
+        "\\binrem": "\\left[\\binom{#1#2}{#2}\\right]_{#2^{#3}}",
+        "\\ind": "\\mathbf 1",
+        "\\pr": "\\mathbb P"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "noe-2013-a222759-prime-cube-growth",
+      "scope": "in_scope",
+      "statement": "For integers $k\\ge3$ and $n\\ge1$,\n\\[\n a(n)\\ge k\\quad\\Longleftrightarrow\\quad n\\ge p_k^3.\n\\]\nIn particular, Noe's sufficient condition $n\\ge p_{p_k^3}$ holds.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+      "toolchain": null,
+      "version": 2,
+      "work": "noe-2013-a222759-prime-cube-growth"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:noe-2013-a222759-prime-cube-growth:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "3d781ae04219d5c99e87e82e3bbc3f6816e3691e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean"
+      },
+      "lineage": "collected:noe-2013-a222759-prime-cube-growth:s4",
+      "macros": {
+        "\\binrem": "\\left[\\binom{#1#2}{#2}\\right]_{#2^{#3}}",
+        "\\ind": "\\mathbf 1",
+        "\\pr": "\\mathbb P"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "noe-2013-a222759-prime-cube-growth",
+      "scope": "in_scope",
+      "statement": "The least prime $b(n)$ in A222760~\\cite{companion} exists for every\n$n\\ge1$. With $M(n)=\\max(W(n)\\cup\\{1\\})$, it is the first prime greater\nthan $M(n)$. More explicitly,\n\\begin{equation}\n b(n)=p_{a(n)+1}\\quad(n\\ne5),\\qquad b(5)=5.\n\\end{equation}\nFor $n\\ge27$ it is\n\\[\n p_{\\pi(\\lfloor n^{1/3}\\rfloor)+1}.\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+      "toolchain": null,
+      "version": 2,
+      "work": "noe-2013-a222759-prime-cube-growth"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:noe-2013-a222759-prime-cube-growth:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "3d781ae04219d5c99e87e82e3bbc3f6816e3691e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean"
+      },
+      "lineage": "collected:noe-2013-a222759-prime-cube-growth:s5",
+      "macros": {
+        "\\binrem": "\\left[\\binom{#1#2}{#2}\\right]_{#2^{#3}}",
+        "\\ind": "\\mathbf 1",
+        "\\pr": "\\mathbb P"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "noe-2013-a222759-prime-cube-growth",
+      "scope": "in_scope",
+      "statement": "For $e=1,2$, the number of primes $p$ with $\\binrem{n}{p}{e}\\ne n$ is\nrespectively $\\pi(n)$ and $\\pi(\\lfloor\\sqrt n\\rfloor)$.\nThese are the counts identified in A222759's second comment by its\ncross-references to A000720~\\cite{pi} and A056811~\\cite{square}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+      "toolchain": null,
+      "version": 2,
+      "work": "noe-2013-a222759-prime-cube-growth"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:noe-2013-a222759-prime-cube-growth:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "3d781ae04219d5c99e87e82e3bbc3f6816e3691e",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean"
+      },
+      "lineage": "collected:noe-2013-a222759-prime-cube-growth:s6",
+      "macros": {
+        "\\binrem": "\\left[\\binom{#1#2}{#2}\\right]_{#2^{#3}}",
+        "\\ind": "\\mathbf 1",
+        "\\pr": "\\mathbb P"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "noe-2013-a222759-prime-cube-growth",
+      "scope": "in_scope",
+      "statement": "The following descriptions hold.\n\\begin{enumerate}\n\\item $c_e(n)$ counts primes $p$ with $p^e\\le n$, and prime factors\nwhose exponent in $\\operatorname{lcm}(1,\\ldots,n)$ is at least $e$.\nFor $e=2$ it also counts positive integers at most $n$ with exactly\nthree divisors, and is the maximum size of a pairwise coprime collection\nof composite integers at most $n$.\n\\item For $e\\ge1$, $c_e(n)=j$ exactly when\n$p_j^e\\le n<p_{j+1}^e$, with the $j=0$ interval $1\\le n<2^e$.\nAs formal power series,\n\\[\n \\sum_{n\\ge1}c_e(n)x^n=\\frac{\\sum_{p\\in\\pr}x^{p^e}}{1-x}.\n\\]\nIn particular,\n\\[\n \\sum_{n\\ge1}a(n)x^n\n =\\frac{\\sum_{p\\in\\pr}x^{p^3}}{1-x}\n   +x^2+x^3+x^6+x^7+x^2\\sum_{j=0}^{8}x^{3j}.\n\\]\n\\item For fixed $e$, the prime number theorem gives\n$c_e(n)\\sim e n^{1/e}/\\log n$ as $n\\to\\infty$. In particular,\n$a(n)\\sim3n^{1/3}/\\log n$.\n\\end{enumerate}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+      "toolchain": null,
+      "version": 2,
+      "work": "noe-2013-a222759-prime-cube-growth"
+    }
+  ]
+}

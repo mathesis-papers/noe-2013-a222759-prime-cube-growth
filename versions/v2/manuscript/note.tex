@@ -1,0 +1,369 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)},
+  pdfauthor={Haobo Ma and Wenlin Zhang},
+  pdfsubject={Exact literal binomial remainder counts and sharp prime-cube growth thresholds},
+  pdfkeywords={A222759, A222760, binomial congruences, Glaisher, CC BY 4.0}
+}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\pr}{\mathbb P}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\binrem}[3]{\left[\binom{#1#2}{#2}\right]_{#2^{#3}}}
+\title{Exact counts and sharp growth for OEIS A222759, first comment
+(12 March 2013): extending Glaisher (1900)}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\
+\small ChronoAI Pte Ltd, Singapore}
+\date{November 6, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Extending Glaisher's (1900) congruence to exact literal-remainder counts,
+we determine OEIS A222759 and prove Noe's growth assertion in its first comment
+(12 March 2013; revision 12, 2 November 2024).
+For every positive integer $n$, its conjectured count equals
+$\pi(\lfloor n^{1/3}\rfloor)$ plus two explicit corrections supported below $27$.
+Consequently, for every $k\ge3$, the count is at least $k$ exactly when
+$n\ge p_k^3$, sharpening the stated sufficient threshold $p_{p_k^3}$.
+The same description determines A222760, including its exceptional relation
+to A222759 at $n=5$. We give a self-contained proof, the counts modulo $p$
+and $p^2$, and elementary consequences for the linked prime-counting entries.
+\end{abstract}
+
+\section{The count and its exact formula}
+For a positive integer $m$, write $[x]_m$ for the least nonnegative remainder
+of the integer $x$ modulo $m$. Let $p_j$ be the $j$th prime, with $p_1=2$,
+and let $\pi(x)$ count the primes not exceeding the real number $x$.
+Noe's entry A222759~\cite{noe}, first comment (12 March 2013), asks for
+growth of a literal-remainder count; Theorem~\ref{thm:exact} determines it
+and Corollary~\ref{cor:growth} gives its sharp threshold.
+The primes counted form
+\[
+ W(n)=\left\{p\in\pr:\binrem{n}{p}{3}\ne n\right\},\qquad n\ge1.
+\]
+The comparison is with the integer $n$, not its residue class. The entry's
+first comment says ``It appears that'' $a(n)\ge k$ for $k>2$ and
+$n\ge p_{p_k^3}$. The cross-reference A096328~\cite{nested} confirms the
+nested indexing. We first give a finite description of $W(n)$, so that
+$a(n)=|W(n)|$ is well-defined.
+
+Set
+\begin{align*}
+ E_2(n)&=\begin{cases}\{2\},&n<8\text{ and }n\equiv2,3\pmod4,\\
+                         \varnothing,&\text{otherwise},\end{cases}\\
+ E_3(n)&=\begin{cases}\{3\},&n<27\text{ and }n\equiv2\pmod3,\\
+                         \varnothing,&\text{otherwise}.\end{cases}
+\end{align*}
+\begin{theorem}\label{thm:exact}
+For every integer $n\ge1$, the following disjoint union is exact:
+\begin{equation}\label{eq:set}
+ W(n)=\{p\in\pr:p^3\le n\}\ \dot\cup\ E_2(n)\ \dot\cup\ E_3(n).
+\end{equation}
+In particular,
+\begin{equation}\label{eq:count}
+ a(n)=\pi(\lfloor n^{1/3}\rfloor)
+ +\ind_{\{n<8,\ n\bmod4\in\{2,3\}\}}
+ +\ind_{\{n<27,\ n\bmod3=2\}}.
+\end{equation}
+Thus $a(n)=\pi(\lfloor n^{1/3}\rfloor)$ for every $n\ge27$.
+\end{theorem}
+
+The classical input is Glaisher's 1900 congruence
+$\binom{np}{p}\equiv n\pmod{p^3}$ for primes $p\ge5$.
+Straub~\cite[\S2, p.~899]{straub} records this attribution and the harmonic
+congruences underlying it; his equation (1) states the stronger
+Ljunggren congruence $\binom{ap}{bp}\equiv\binom ab\pmod{p^3}$.
+Here the additional step is to distinguish equality of literal remainders
+from congruence, and to treat $p=2,3$ explicitly.
+
+\section{A self-contained proof}
+\begin{lemma}[Glaisher (1900), reproved]\label{lem:glaisher}
+For every prime $p\ge5$ and integer $n\ge1$,
+$\binom{np}{p}\equiv n\pmod{p^3}$.
+\end{lemma}
+\begin{proof}
+All fractions below have denominators coprime to $p$; congruences of these
+fractions mean congruences after inverting their denominators. Put
+\[
+ H_1=\sum_{j=1}^{p-1}\frac1j,\qquad
+ H_2=\sum_{j=1}^{p-1}\frac1{j^2},\qquad
+ S_2=\sum_{1\le i<j\le p-1}\frac1{ij}.
+\]
+Inversion permutes the nonzero residues modulo $p$, whence
+\[
+ H_2\equiv\sum_{j=1}^{p-1}j^2
+ =\frac{p(p-1)(2p-1)}6\equiv0\pmod p.
+\]
+The denominator $6$ is invertible because $p\ge5$. Substituting $p-j$ for
+$j$ and expanding modulo $p^2$ gives
+\[
+ 2H_1=\sum_{j=1}^{p-1}\left(\frac1j+\frac1{p-j}\right)
+ \equiv-pH_2\equiv0\pmod{p^2}.
+\]
+Hence $H_1\equiv0\pmod{p^2}$, and
+$2S_2=H_1^2-H_2$ gives $S_2\equiv0\pmod p$.
+Since $p$ is odd, the product formula for the binomial coefficient yields
+\[
+ \binom{np}{p}
+ =n\prod_{j=1}^{p-1}\left(1-\frac{np}{j}\right)
+ \equiv n\bigl(1-npH_1+n^2p^2S_2\bigr)
+ \equiv n\pmod{p^3}.
+\]
+Every omitted product term contains at least three factors of $p$.
+No division by $n$ is used, so the argument also covers $p\mid n$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:exact}]
+If $p^3\le n$, then $0\le\binrem{n}{p}{3}<p^3\le n$, so $p\in W(n)$,
+including the boundary $n=p^3$.
+If $p^3>n$ and $p\ge5$, Lemma~\ref{lem:glaisher} says that the remainder
+is $n$, because $0\le n<p^3$. Such a prime is not in $W(n)$.
+
+For $p=2$ the exact identity
+\[
+ \binom{2n}{2}-n=2n(n-1)
+\]
+is divisible by $8$ exactly when $4\mid n(n-1)$, or equivalently
+$n\equiv0,1\pmod4$. When $n<8$, the other two residue classes give precisely
+$E_2(n)$; when $n\ge8$, the range argument already applies.
+For $p=3$,
+\[
+ \binom{3n}{3}-n=\frac92 n^2(n-1).
+\]
+Since $2$ is coprime to $3$, this is divisible by $27$ exactly when
+$3\mid n^2(n-1)$, that is, $n\equiv0,1\pmod3$.
+For $n<27$ the remaining class gives $E_3(n)$, and for $n\ge27$ the range
+argument applies. The three sets in~\eqref{eq:set} are disjoint by their
+defining inequalities, and all are finite. Counting proves~\eqref{eq:count}.
+\end{proof}
+
+\section{Growth and companion assertions}
+\begin{corollary}[Sharp growth threshold]\label{cor:growth}
+For integers $k\ge3$ and $n\ge1$,
+\[
+ a(n)\ge k\quad\Longleftrightarrow\quad n\ge p_k^3.
+\]
+In particular, Noe's sufficient condition $n\ge p_{p_k^3}$ holds.
+\end{corollary}
+\begin{proof}
+For $n<27$, equation~\eqref{eq:set} gives $W(n)\subseteq\{2,3\}$, so
+$a(n)\le2$. For $n\ge27$, equation~\eqref{eq:count} gives
+$a(n)=\pi(\lfloor n^{1/3}\rfloor)$, which is at least $k$ exactly when
+$p_k^3\le n$. Finally, $p_m\ge m+1$ for every $m\ge1$, since the $m$
+distinct integers $p_1,\ldots,p_m$ all lie in $\{2,\ldots,p_m\}$.
+Thus $p_{p_k^3}>p_k^3$.
+\end{proof}
+
+The sufficient direction has an even shorter proof independent of the
+classical congruence: if $n\ge p_k^3$, the first $k$ primes satisfy
+$\binrem{n}{p_j}{3}<p_j^3\le p_k^3\le n$. This proves the original growth
+assertion without presupposing finiteness of the full witness set.
+For example, the sharp thresholds for $k=3,4$ are $125,343$, whereas
+A096328 gives $691,2309$ for the proposed sufficient thresholds.
+
+The two remaining count levels can also be described completely:
+\begin{equation}\label{eq:small-levels}
+\begin{split}
+ a(n)\ge1&\quad\Longleftrightarrow\quad n\notin\{1,4\},\\
+ a(n)\ge2&\quad\Longleftrightarrow\quad n\ge27
+ \text{ or }n\in\{2,8,11,14,17,20,23,26\}.
+\end{split}
+\end{equation}
+These follow by substituting $1\le n<27$ in~\eqref{eq:count}; for
+$n\ge27$, the primes $2,3$ both lie in $W(n)$. These levels were not
+part of Noe's first-comment assertion.
+
+\begin{corollary}[The eventual-good-prime sequence]\label{cor:companion}
+The least prime $b(n)$ in A222760~\cite{companion} exists for every
+$n\ge1$. With $M(n)=\max(W(n)\cup\{1\})$, it is the first prime greater
+than $M(n)$. More explicitly,
+\begin{equation}\label{eq:companion-all}
+ b(n)=p_{a(n)+1}\quad(n\ne5),\qquad b(5)=5.
+\end{equation}
+For $n\ge27$ it is
+\[
+ p_{\pi(\lfloor n^{1/3}\rfloor)+1}.
+\]
+\end{corollary}
+\begin{proof}
+Equation~\eqref{eq:set} is a finite description of all bad primes. Every
+prime above their maximum is good. Any smaller candidate prime has a bad
+prime at or above it, and therefore fails the defining condition.
+For $n\ge27$ the bad primes are exactly the primes with $p^3\le n$.
+For $8\le n<27$, they are $\{2\}$ or $\{2,3\}$; for $1\le n<8$,
+the only witness set which is not an initial segment of the primes is
+$W(5)=\{3\}$. This proves~\eqref{eq:companion-all}.
+\end{proof}
+
+The case $n=2$ gives $W(2)=\{2,3\}$ and $b(2)=5$.
+For $p\ge5$, its congruence is Wolstenholme's (1862), as recalled by
+Straub~\cite[\S2]{straub}. The A222760 comment points to Weisstein's
+MathWorld entry~\cite[eq.~(6)]{mathworld}, which records this consequence
+and attributes its observation there to Noe in 2005. The general formula
+above extends this recorded special case.
+
+\begin{corollary}[The two smaller moduli]\label{cor:lower}
+For $e=1,2$, the number of primes $p$ with $\binrem{n}{p}{e}\ne n$ is
+respectively $\pi(n)$ and $\pi(\lfloor\sqrt n\rfloor)$.
+These are the counts identified in A222759's second comment by its
+cross-references to A000720~\cite{pi} and A056811~\cite{square}.
+\end{corollary}
+\begin{proof}
+For an odd prime $p$, the same product gives
+$\binom{np}{p}\equiv n\pmod p$. Also $H_1\equiv0\pmod p$ by pairing $j$
+with $p-j$, so expansion through the linear term gives the congruence
+modulo $p^2$ for every odd prime, including $3$.
+For $p=2$, the identity $\binom{2n}{2}-n=2n(n-1)$ is divisible by $4$.
+Thus for either exponent $e$, the literal remainder equals $n$ exactly
+when $n<p^e$; if $n\ge p^e$, it is smaller than $n$. Counting these primes
+proves the two formulas.
+\end{proof}
+
+\paragraph{Higher powers.}
+The source's second comment (14 March 2013) also suggests a failure for
+higher powers, without specifying an exact replacement count. A precise
+obstruction is that the uniform congruence for primes $p\ge5$ cannot be
+extended to any exponent
+$e\ge4$: $n=2$, $p=5$ gives $\binom{10}{5}=252$, and
+$[252]_{5^e}=252\ne2$ for every $e\ge4$.
+The assertion of a uniform congruence at every higher exponent is
+\emph{not asserted in the source; it fails for this example}.
+This obstruction does not determine finiteness or the exact number of
+exceptional primes for the larger exponents.
+
+\section{Elementary consequences for the linked entries}
+Let $c_e(n)=\pi(n^{1/e})$ for positive integers $e,n$. Thus $c_1$ is
+A000720 and $c_2$ is A056811; the counts above are $c_1,c_2$ and,
+for $n\ge27$, $c_3$.
+\begin{corollary}\label{cor:linked}
+The following descriptions hold.
+\begin{enumerate}
+\item $c_e(n)$ counts primes $p$ with $p^e\le n$, and prime factors
+whose exponent in $\operatorname{lcm}(1,\ldots,n)$ is at least $e$.
+For $e=2$ it also counts positive integers at most $n$ with exactly
+three divisors, and is the maximum size of a pairwise coprime collection
+of composite integers at most $n$.
+\item For $e\ge1$, $c_e(n)=j$ exactly when
+$p_j^e\le n<p_{j+1}^e$, with the $j=0$ interval $1\le n<2^e$.
+As formal power series,
+\[
+ \sum_{n\ge1}c_e(n)x^n=\frac{\sum_{p\in\pr}x^{p^e}}{1-x}.
+\]
+In particular,
+\[
+ \sum_{n\ge1}a(n)x^n
+ =\frac{\sum_{p\in\pr}x^{p^3}}{1-x}
+   +x^2+x^3+x^6+x^7+x^2\sum_{j=0}^{8}x^{3j}.
+\]
+\item For fixed $e$, the prime number theorem gives
+$c_e(n)\sim e n^{1/e}/\log n$ as $n\to\infty$. In particular,
+$a(n)\sim3n^{1/3}/\log n$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+The exponent of $p$ in the least common multiple is the largest $r$
+with $p^r\le n$, proving the first two interpretations.
+An integer has exactly three divisors precisely when it is the square
+of a prime. Every composite $m\le n$ has a prime factor at most
+$\sqrt m\le\sqrt n$; pairwise coprime composites have distinct such
+factors. Their number is at most $c_2(n)$, attained by the prime squares.
+The interval statement is the definition of prime counting.
+For the generating function, sum $\sum_{n\ge p^e}x^n=x^{p^e}/(1-x)$
+over primes; each coefficient involves finitely many primes.
+The two correction indicators in~\eqref{eq:count} give the displayed
+polynomial. Finally, substitute $t=n^{1/e}$ into
+$\pi(t)\sim t/\log t$, recorded in A000720~\cite{pi}.
+\end{proof}
+
+For $e=2$, these interpretations and consequences reprove A056811's
+comments and formulas: its original least-common-multiple and
+three-divisor descriptions; Hurt's prime-square comment (2013);
+Xie's pairwise-coprime maximum (2024); Herv\'e's constant blocks (2013);
+Gutkovskiy's generating function (2019); and Richman's asymptotic (2022).
+The same argument gives the partial sums of the prime indicator and
+inverse-prime relations in A000720. The partitions of $2n$ into two
+parts with smaller part prime are precisely $(p,2n-p)$ with $p\le n$,
+giving Hurt's 2013 interpretation there. Also the primes dividing $n!$
+are exactly those at most $n$, proving its factor-count description.
+
+\section{Coverage and verification}
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.62\linewidth}@{}}
+\toprule
+Source item & Mathematical coverage\\
+\midrule
+A222759, first comment (2013) & Proved; Corollary~\ref{cor:growth} sharpens its sufficient threshold.\\
+A222759, sharp converse and small levels & Not posed; proved in Corollary~\ref{cor:growth} and equation~\eqref{eq:small-levels}.\\
+A222759, count definition & Determined by Theorem~\ref{thm:exact}.\\
+Classical congruence & Reproved; prior proof Glaisher (1900), via Straub (2011), \S2.\\
+A222759, second comment: $p,p^2$ & Reproved identifications; Noe (2013), with written proof in Corollary~\ref{cor:lower}.\\
+A222759, higher-power remark & Obstruction proved for the uniform-congruence interpretation; full counting question not covered.\\
+Uniform higher-power extension & Not asserted in the source; fails for $(n,p)=(2,5)$.\\
+A222760, least-prime definition & Determined for every $n$; Corollary~\ref{cor:companion}.\\
+A222760, relation to $a(n)$ & Not posed; proved in equation~\eqref{eq:companion-all}.\\
+A222760, $n=2$ comment & Reproved; prior proof Wolstenholme (1862); Noe (2005) recorded in MathWorld, eq.~(6).\\
+A096328 & Definition retained; gives a sufficient, not sharp, growth threshold.\\
+A056811, elementary comments/formulas & Reproved interpretations, blocks, generating function and PNT consequence; Corollary~\ref{cor:linked}.\\
+General $c_e$ and cubic generating function & Not posed; proved in Corollary~\ref{cor:linked}.\\
+A000720, elementary identities & Proved consequences above, including its two-part partitions and factorial prime factors.\\
+A000720, analytic bounds and remaining identities & Not covered; no implication here for RH or the Hardy--Littlewood conjecture.\\
+\bottomrule
+\end{tabular}
+\end{center}
+The declaration
+\texttt{D5.S3.Arith.PrimeRemainders.}\allowbreak
+\texttt{OeisA222759Growth.result}
+states the original sufficient-threshold assertion: for $k\ge3$, $n\ge1$,
+and $n\ge p_{p_k^3}$, there are $k$ distinct prime witnesses. Its
+\href{https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean}{pinned Lean source}
+uses the first $k$ primes and the remainder-range argument.
+The Lean statement has the original nested-prime hypothesis; it does not
+state finiteness, an exact cardinality, or the sharp converse.
+The exact count, its sharp threshold, the companion and smaller-modulus
+formulas, and Corollary~\ref{cor:linked} have the written proofs above.
+
+The accompanying Python program performs exact finite checks of all three
+moduli for $1\le n\le512$ and all $25$ primes at most $97$, and of both
+cubic-remainder sequences against their OEIS tables for $1\le n\le10000$.
+These finite checks supplement the proofs for arbitrary positive $n$.
+The program also checks the small count levels, companion relation,
+generating-function coefficients and elementary linked interpretations
+over the explicit ranges in \texttt{verification.json}.
+The source archive contains \texttt{note.tex}, \texttt{verify.py},
+\texttt{verification.json}, \texttt{metadata.json}, and rebuild instructions.
+
+\begin{thebibliography}{9}
+\bibitem{noe} T.~D. Noe, \emph{A222759}, The On-Line Encyclopedia of
+Integer Sequences, March 12, 2013; revision 12, November 2, 2024.
+\url{https://oeis.org/A222759}.
+\bibitem{straub} A. Straub, A $q$-analog of Ljunggren's binomial congruence,
+\emph{Discrete Mathematics \& Theoretical Computer Science Proceedings}
+\textbf{AO} (2011), 897--902.
+\href{https://doi.org/10.46298/dmtcs.2962}{doi:10.46298/dmtcs.2962};
+arXiv:1103.3258v1.
+\bibitem{companion} T.~D. Noe, \emph{A222760}, The On-Line Encyclopedia
+of Integer Sequences, March 13, 2013; revision 9, February 16, 2025.
+\url{https://oeis.org/A222760}.
+\bibitem{nested} C. Hilliard, \emph{A096328}, The On-Line Encyclopedia
+of Integer Sequences, August 2, 2004; revision 14, October 31, 2013.
+\url{https://oeis.org/A096328}.
+\bibitem{pi} The OEIS Foundation Inc., \emph{A000720: the prime-counting
+function}, The On-Line Encyclopedia of Integer Sequences.
+\url{https://oeis.org/A000720}.
+\bibitem{square} Labos Elemer, \emph{A056811}, The On-Line Encyclopedia of
+Integer Sequences, August 28, 2000; revision 49, August 15, 2024.
+\url{https://oeis.org/A056811}.
+\bibitem{mathworld} E.~W. Weisstein, \emph{Central Binomial Coefficient},
+MathWorld, eq.~(6).
+\url{https://mathworld.wolfram.com/CentralBinomialCoefficient.html}.
+\end{thebibliography}
+\medskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+\end{document}

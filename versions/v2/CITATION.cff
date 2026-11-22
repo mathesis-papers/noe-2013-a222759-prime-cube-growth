@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-22"
+version: "2"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/noe-2013-a222759-prime-cube-growth?version=2"
+license: "CC-BY-4.0"

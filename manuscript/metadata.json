@@ -1,0 +1,17 @@
+{
+  "id": "noe-2013-a222759-prime-cube-growth",
+  "revision": 2,
+  "problem_ids": [
+    "noe-2013-a222759-prime-cube-growth"
+  ],
+  "topic": "Exact counts of primes with literal binomial remainders different from the positive integer n",
+  "title": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Glaisher's (1900) congruence to exact literal-remainder counts, we determine OEIS A222759 and prove Noe's growth assertion in its first comment (12 March 2013; revision 12, 2 November 2024). For every positive integer n, its conjectured count equals pi(floor(n^(1/3))) plus two explicit corrections supported below 27. Consequently, for every k >= 3, the count is at least k exactly when n >= p_k^3, sharpening the stated sufficient threshold p_(p_k^3). The same description determines A222760, including its exceptional relation to A222759 at n=5. We give a self-contained proof, the counts modulo p and p^2, and elementary consequences for the linked prime-counting entries.",
+  "summary": "The bad primes are precisely those with p^3 <= n, together with 2 if n < 8 and n mod 4 is 2 or 3, and 3 if n < 27 and n mod 3 is 2. Thus a(n) >= k iff n >= p_k^3 for k >= 3. The companion b(n) equals p_(a(n)+1) except at n=5, where b(5)=5. Written corollaries give the small count levels, linked elementary interpretations, generating functions and prime-number-theorem consequences.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean"
+}

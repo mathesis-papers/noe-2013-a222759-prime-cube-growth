@@ -1,0 +1,226 @@
+{
+  "coverage": {
+    "finite_checks": "the displayed finite ranges",
+    "lean_declaration": "D5.S3.Arith.PrimeRemainders.OeisA222759Growth.result",
+    "lean_statement": "k >= 3 and n >= p_(p_k^3) imply k distinct prime witnesses",
+    "written_proofs": [
+      "finite witness set",
+      "exact count",
+      "sharp growth threshold",
+      "least eventual good prime",
+      "modulus p and p^2 counts",
+      "all small count levels",
+      "companion relation except n=5",
+      "linked elementary interpretations and generating functions",
+      "prime-number-theorem consequences"
+    ]
+  },
+  "higher_power_obstruction": {
+    "all_exponents_argument": "252 < 5^4 <= 5^e for every integer e >= 4",
+    "binomial": 252,
+    "checked_exponents": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "n": 2,
+    "p": 5,
+    "source_status": "uniform higher-power assertion not asserted in the source"
+  },
+  "integer_binomial_checks": {
+    "comparisons": 38400,
+    "exponents": [
+      1,
+      2,
+      3
+    ],
+    "method": "math.comb followed by exact integer remainder",
+    "n_max": 512,
+    "n_min": 1,
+    "primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97
+    ]
+  },
+  "oeis_comparisons": [
+    {
+      "sequence": "A222759",
+      "sha256": "043201c8719eccd1e3b7c139652e550d226c54227c7b092e3ae6ccf6ca2bda1c",
+      "terms_compared": 10000,
+      "url": "https://oeis.org/A222759/b222759.txt"
+    },
+    {
+      "sequence": "A222760",
+      "sha256": "30fcdea315ad1d9c3c5c7f2f845ffb28d50ebc8028d5ebae2b73c01a1aa227a7",
+      "terms_compared": 10000,
+      "url": "https://oeis.org/A222760/b222760.txt"
+    }
+  ],
+  "original_mathematica_range": {
+    "comparisons": 8700,
+    "first_primes": 100,
+    "method": "math.comb",
+    "n_max": 87,
+    "n_min": 1
+  },
+  "sharp_threshold_checks": [
+    {
+      "k": 3,
+      "prime": 5,
+      "sharp_threshold": 125
+    },
+    {
+      "k": 4,
+      "prime": 7,
+      "sharp_threshold": 343
+    },
+    {
+      "k": 5,
+      "prime": 11,
+      "sharp_threshold": 1331
+    },
+    {
+      "k": 6,
+      "prime": 13,
+      "sharp_threshold": 2197
+    },
+    {
+      "k": 7,
+      "prime": 17,
+      "sharp_threshold": 4913
+    },
+    {
+      "k": 8,
+      "prime": 19,
+      "sharp_threshold": 6859
+    }
+  ],
+  "sibling_checks": {
+    "factorial_factors_and_two_part_partitions": {
+      "n_max": 128,
+      "n_min": 1
+    },
+    "generating_function_coefficients": {
+      "n_max": 512,
+      "n_min": 1
+    },
+    "lcm_exponent_interpretations": {
+      "exponents": [
+        1,
+        2,
+        3
+      ],
+      "n_max": 512,
+      "n_min": 1
+    },
+    "pairwise_coprime_composite_maximum": {
+      "maxima": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "method": "exhaustive dynamic programming over disjoint prime-factor masks",
+      "n_max": 64,
+      "n_min": 1
+    },
+    "three_divisor_interpretation": {
+      "n_max": 512,
+      "n_min": 1
+    }
+  },
+  "small_count_levels_and_companion_relation": {
+    "n_max": 10000,
+    "n_min": 1
+  },
+  "status": "pass"
+}
