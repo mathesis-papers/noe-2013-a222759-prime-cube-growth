@@ -5,13 +5,15 @@
 Extending Glaisher's (1900) congruence to exact literal-remainder counts, we determine OEIS A222759 and prove Noe's growth assertion in its first comment (12 March 2013; revision 12, 2 November 2024). For every positive integer n, its conjectured count equals pi(floor(n^(1/3))) plus two explicit corrections supported below 27. Consequently, for every k >= 3, the count is at least k exactly when n >= p_k^3, sharpening the stated sufficient threshold p_(p_k^3). The same description determines A222760, including its exceptional relation to A222759 at n=5. We give a self-contained proof, the counts modulo p and p^2, and elementary consequences for the linked prime-counting entries.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24405795](https://doi.org/10.5281/zenodo.24405795)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24405794](https://doi.org/10.5281/zenodo.24405794)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [noe-2013-a222759-prime-cube-growth](https://mathesis-omega-research.apps.chrono-ai.fun/papers/noe-2013-a222759-prime-cube-growth?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900). Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/noe-2013-a222759-prime-cube-growth?version=2
+Haobo Ma, Wenlin Zhang (2026). Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900). Mathesis, version 2. https://doi.org/10.5281/zenodo.24405795
 
 ## Statement progress
 
