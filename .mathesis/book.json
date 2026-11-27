@@ -1,0 +1,79 @@
+{
+  "book": "noe-2013-a222759-prime-cube-growth",
+  "pending_claims": [],
+  "results": {
+    "thm-exact": {
+      "claim": "collected:noe-2013-a222759-prime-cube-growth:2:s1",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Exact set of cubic binomial remainder witnesses",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/580"
+      }
+    },
+    "lem-glaisher": {
+      "claim": "collected:noe-2013-a222759-prime-cube-growth:2:s2",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Glaisher binomial congruence modulo a prime cube",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/581"
+      }
+    },
+    "cor-growth": {
+      "claim": "collected:noe-2013-a222759-prime-cube-growth:2:s3",
+      "gids": [],
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Sharp prime-cube growth threshold",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/582"
+      }
+    },
+    "cor-companion": {
+      "claim": "collected:noe-2013-a222759-prime-cube-growth:2:s4",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Least eventual good prime for cubic binomial remainders",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/583"
+      }
+    },
+    "cor-lower": {
+      "claim": "collected:noe-2013-a222759-prime-cube-growth:2:s5",
+      "gids": [],
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Exact literal remainder counts modulo p and p squared",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/584"
+      }
+    },
+    "cor-linked": {
+      "claim": "collected:noe-2013-a222759-prime-cube-growth:2:s6",
+      "gids": [],
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "formalization_request": {
+        "label": "Prime-power counting identities and asymptotics",
+        "url": "https://github.com/the-omega-institute/trureturing-requests/issues/585"
+      }
+    }
+  },
+  "stage": "complete",
+  "titles": {
+    "en": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)",
+    "zh": "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)"
+  },
+  "version": 2,
+  "work": "noe-2013-a222759-prime-cube-growth"
+}

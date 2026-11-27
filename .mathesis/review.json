@@ -1,0 +1,40 @@
+{
+  "results": {
+    "thm-exact": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "The nested-threshold injection does not give membership iff, finiteness, exact cardinality or either correction at 2 and 3."
+    },
+    "lem-glaisher": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "No matching frozen congruence identified; the growth proof does not use a congruence at all. Glaisher applies at all positive n and primes p at least 5, including p dividing n."
+    },
+    "cor-growth": {
+      "comparison_verdict": "special case",
+      "compared_public_gid": "D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "Exactly the old nested-threshold witness implication; no sharp forward implication from n at least p_k cubed, no converse, and no finite count."
+    },
+    "cor-companion": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "No matching declaration identified: existence and minimality for the universal tail, empty W and n=5 require more than a witness injection."
+    },
+    "cor-lower": {
+      "comparison_verdict": "variant",
+      "compared_public_gid": "D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result",
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "Cubic remainder under a nested threshold is a different modulus and conclusion. No exact combined mod-p and mod-p-squared counts identified."
+    },
+    "cor-linked": {
+      "comparison_verdict": "none",
+      "compared_public_gid": null,
+      "comparison_commit": "8a24ea4e79de962725aab9d9b49cc605fcc211d8",
+      "scope": "No matching collective declaration identified. MediumPNT bounds Chebyshev psi rather than stating the prime-power counts, boundary intervals, formal series or fixed-exponent ratios."
+    }
+  }
+}

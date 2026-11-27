@@ -1,0 +1,25 @@
+{
+  "voice": "af_heart",
+  "speed": 0.94,
+  "say": {},
+  "music": {"bpm": 80, "progression": "a-minor"},
+  "scenes": [
+    {"id": "range", "name": "THE RANGE", "lead": 1.0, "tail": 0.7, "lines": [
+      ["Take the number of ways to choose two objects from sixteen. The answer is one hundred and twenty.", "从十六个物体中选两个，共有一百二十种选法。"],
+      ["Divide by eight. The remainder is zero, not eight. In fact, no remainder upon division by eight can reach eight.", "除以八，余数是零，不是八。事实上，除以八的余数不可能达到八。"],
+      ["This is the shortcut: when the cube of a prime is at most the input, count that prime without computing the coefficient.", "这就是捷径：素数的立方不超过输入时，不用算二项式系数也能把它计入。"]
+    ]},
+    {"id": "corrections", "name": "TWO CORRECTIONS", "lead": 0.7, "tail": 0.7, "lines": [
+      ["For primes at least five, Glaisher's congruence shows that if the input fits in the remainder range, it is the remainder.", "对不小于五的素数，Glaisher 的同余式表明：只要输入落在余数范围内，余数就等于输入。"],
+      ["Two and three have their own small-input rules. Beyond those ranges, only prime cubes matter.", "二和三在小输入时另有规则。超出这两个范围后，只看素数的立方。"]
+    ]},
+    {"id": "threshold", "name": "THE THIRD WITNESS", "lead": 0.7, "tail": 0.9, "lines": [
+      ["At one hundred and twenty-four, only the cubes of two and three have been reached.", "输入一百二十四时，只到达了二和三的立方。"],
+      ["One step later we reach the cube of five. The third exception appears at one hundred and twenty-five.", "再走一步就到达五的立方。第三个例外在一百二十五出现。"],
+      ["Noe's older bound, six hundred and ninety-one, was sufficient. The paper's exact count tells us where the step really is.", "Noe 原来给的六百九十一是充分门槛。原论文的精确计数找到了真正的跳跃位置。"]
+    ]},
+    {"id": "scope", "name": "TWO DIFFERENT CLAIMS", "lead": 0.6, "tail": 2.0, "lines": [
+      ["The Lean proof guarantees distinct witnesses under Noe's older bound. The sharp threshold in both directions is proved in writing by Haobo Ma and Wenlin Zhang.", "Lean 证明保证在 Noe 原来的门槛下有足够多的不同例外。Haobo Ma 和 Wenlin Zhang 在论文中给出了准确门槛的双向证明。"]
+    ]}
+  ]
+}

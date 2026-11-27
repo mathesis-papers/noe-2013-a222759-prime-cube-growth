@@ -1,0 +1,97 @@
+\documentclass{beamer}
+\input{tbook-deck}
+\title{Counting prime cubes}
+\subtitle{Exact literal-remainder counts for OEIS A222759}
+\author{Source paper: Haobo Ma and Wenlin Zhang}
+\institute{ChronoAI Pte Ltd, Singapore \\ National University of Singapore (Wenlin Zhang)}
+\date{Version 2 \quad\href{https://doi.org/10.5281/zenodo.24405795}{doi:10.5281/zenodo.24405795}}
+\begin{document}
+% Manuscript: Abstract and Section 1
+\begin{frame}
+  \titlepage
+  \note{This seminar explains the paper by Ma and Zhang. The motivating question is Noe's first comment on A222759, March 12, 2013.}
+\end{frame}
+% Manuscript: Sections 1--4
+\begin{frame}{Outline}
+  \tableofcontents
+  \note{First separate congruence from literal equality. Then count witnesses and compare the two thresholds. End with companion counts and evidence.}
+\end{frame}
+\section{Remainders}
+\subsection{Range and congruence}
+% Manuscript: Section 1, witness definition
+\begin{frame}{The remainder is compared with the integer}
+  Fix $n\ge1$. For each prime $p$, set
+  \[R_e(n,p)=\binom{np}{p}\bmod p^e,\qquad 0\le R_e(n,p)<p^e.\]
+  Count $p$ when $R_3(n,p)\ne n$.
+  \begin{exampleblock}{A boundary case}
+    At $n=8$, $p=2$, the remainder of $\binom{16}{2}=120$ is $0$, not $8$.
+  \end{exampleblock}
+  \note{Zero and eight are congruent modulo eight. Nonetheless the requested predicate compares the remainder to the integer $n$. Whenever $p^3\le n$, the range alone forces an exception.}
+\end{frame}
+% Manuscript: Section 2, Lemma 2
+\begin{frame}{Inside the range, use a congruence}
+  \begin{bookresult}{lem-glaisher}
+    If $n\ge1$ and $p\ge5$ is prime, $\binom{np}{p}\equiv n\pmod{p^3}$.
+  \end{bookresult}
+  Hence $p^3>n$ makes $p\ge5$ good.
+  \note{Glaisher's 1900 congruence is reproved in the paper; Straub, Section 2, records the classical attribution. Invert $1,\ldots,p-1$ modulo powers of $p$ and expand the product. Pairing complementary residues and summing squares cancels both low-degree terms without dividing by $n$.}
+\end{frame}
+% Manuscript: Theorem 1, Sections 1--2
+\begin{frame}{Exactly which primes count?}
+  \begin{bookresult}{thm-exact}
+    Count every prime with $p^3\le n$. Also count:
+    \begin{itemize}
+      \item $2$ if $n<8$ and $n\bmod4\in\{2,3\}$;
+      \item $3$ if $n<27$ and $n\bmod3=2$.
+    \end{itemize}
+    These sets are disjoint. From $27$ onward neither correction applies.
+  \end{bookresult}
+  \note{For $2$ the difference is $2n(n-1)$; for $3$ it is $9n^2(n-1)/2$. Check divisibility by $8$ and $27$, respectively. At the cube boundaries the range already counts the prime.}
+\end{frame}
+\section{Thresholds}
+\subsection{Sharp and sufficient}
+% Manuscript: Section 3, Corollary 3
+\begin{frame}{The third witness arrives at 125}
+  \begin{bookresult}{cor-growth}
+    For $k\ge3$ and $n\ge1$, $a(n)\ge k$ if and only if $n\ge p_k^3$.
+  \end{bookresult}
+  \[\begin{array}{c|cc}
+     n &124&125\\ \hline
+     W(n)&\{2,3\}&\{2,3,5\}
+  \end{array}\]
+  Noe's older sufficient bound is $p_{p_k^3}$: for $k=3$, it is $691$.
+  \note{Below $27$ there are at most two witnesses. From $27$ onward the prime list cuts off at the integer cube root. The first $k$ primes prove sufficiency by range alone; excluding later primes supplies necessity. The nested index comes from the A096328 cross-reference.}
+\end{frame}
+% Manuscript: Section 3, Corollary 4
+\begin{frame}{Count versus last exception}
+  \begin{bookresult}{cor-companion}
+    A222760 starts at the first prime after $\max(W(n)\cup\{1\})$.
+    Thus $b(n)=p_{a(n)+1}$ except at $n=5$, where $b(5)=5$.
+  \end{bookresult}
+  \note{At $n=5$ the singleton witness is $3$. Even though $2$ is good, the universal condition on primes at or above it fails. The empty witness set starts at $2$.}
+\end{frame}
+\subsection{Scope}
+% Manuscript: Section 5
+\begin{frame}{What has been formalized?}
+  \begin{itemize}
+    \item The \href{https://github.com/the-omega-institute/trureturing/blob/3d781ae04219d5c99e87e82e3bbc3f6816e3691e/D5/S3/Arith/PrimeRemainders/OeisA222759Growth.lean\#L25}{pinned Lean theorem} gives $k$ distinct witnesses under $n\ge p_{p_k^3}$, for $k\ge3$ and $n\ge1$.
+    \item It does not give finiteness, the exact count, or the sharp equivalence.
+    \item The paper proves those stronger claims in writing. See the \href{https://github.com/the-omega-institute/trureturing-requests/issues/582}{sharp-threshold request}.
+  \end{itemize}
+  \note{The injection provides the original sufficient assertion without assuming a finite total witness set. Do not infer the converse or the smaller sharp threshold from that declaration.}
+\end{frame}
+\appendix
+% Manuscript: Sections 3--4, Corollaries 5 and 6
+\begin{frame}{Two related counts}
+  \begin{bookresult}{cor-lower}
+    Modulo $p$ and $p^2$, the respective counts are $\pi(n)$ and $\pi(\lfloor\sqrt n\rfloor)$.
+  \end{bookresult}
+  \begin{bookresult}{cor-linked}
+    For fixed $e\ge1$, prime powers at most $n$ number
+    $c_e(n)=\pi(n^{1/e})\sim e n^{1/e}/\log n$.
+  \end{bookresult}
+  \note{The second block is the asymptotic clause of Corollary 6. The full corollary also gives least-common-multiple exponents, the prime-square interpretations, intervals and formal series. For higher moduli the shortcut fails: $\binom{10}{5}=252$ has remainder $252\ne2$ modulo $5^e$ for every $e\ge4$. No higher-power count is claimed.}
+\end{frame}
+% Manuscript: Evidence ledger (generated)
+\FormalVerification
+\end{document}

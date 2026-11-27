@@ -29,3 +29,41 @@ Haobo Ma, Wenlin Zhang (2026). Exact counts and sharp growth for OEIS A222759, f
 ## Contributions
 
 Original authors are listed above. Formalization contributors and attribution are retained in `formalization/nodes.json`; repository pull requests do not confer verification or credit. Submit formalization attempts through the Mathesis attempt path described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+<!-- Mathesis generated repository guide; refresh with paper.py front. -->
+
+## Reading and materials
+
+[Paper site](https://papers.trureturing.org/noe-2013-a222759-prime-cube-growth/) · [Frozen PDF](paper.pdf) · [Citation](CITATION.cff)
+
+[中文阅读](https://papers.trureturing.org/noe-2013-a222759-prime-cube-growth/noe-2013-a222759-prime-cube-growth/zh/) · [Read in English](https://papers.trureturing.org/noe-2013-a222759-prime-cube-growth/noe-2013-a222759-prime-cube-growth/en/)
+
+[Slides](https://papers.trureturing.org/noe-2013-a222759-prime-cube-growth/noe-2013-a222759-prime-cube-growth/slides/) ([sources](books/noe-2013-a222759-prime-cube-growth/slides/)) · [Videos](https://papers.trureturing.org/noe-2013-a222759-prime-cube-growth/noe-2013-a222759-prime-cube-growth/films/) ([sources](books/noe-2013-a222759-prime-cube-growth/films/))
+
+These are publication routes; available built materials are inventoried in [mathesis-materials.json](https://papers.trureturing.org/noe-2013-a222759-prime-cube-growth/mathesis-materials.json).
+
+## Book and formalization
+
+Catalog formalization status above is separate from the statement comparisons below. A nearby declaration does not verify the complete written result.
+
+| Book result | Comparison with formal base | Compared declaration |
+|---|---|---|
+| `thm-exact` | variant | `D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result` |
+| `lem-glaisher` | none | — |
+| `cor-growth` | special case | `D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result` |
+| `cor-companion` | none | — |
+| `cor-lower` | variant | `D5/S3/Arith/PrimeRemainders/OeisA222759Growth.result` |
+| `cor-linked` | none | — |
+
+Book stage: **complete**; 0 pending claims. [Statement comparisons](.mathesis/review.json).
+
+## Repository map
+
+| Zone | Location |
+|---|---|
+| Paper record | `paper.json`, `CITATION.cff`, `paper.pdf`, `manuscript/`, `formalization/nodes.json`, `LICENSES/`, `.mathesis/` |
+| Content | `books/noe-2013-a222759-prime-cube-growth/`: Chinese/English text, figures, visualizations, videos, slides, assets |
+| Machinery | Upstream and layer managed paths; update with `tbook template update` |
+| Repository front | This README, changelog, contribution guide, licence, project/site/pin configuration, `template.d/` |
+
+See [the enforced layout](docs/layer-mathesis/LAYOUT.md). Preparation run records and built outputs stay outside the committed tree.

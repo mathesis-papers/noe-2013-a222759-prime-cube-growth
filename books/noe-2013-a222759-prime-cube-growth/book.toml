@@ -1,0 +1,17 @@
+[book]
+version = "2"
+authors = ["Haobo Ma", "Wenlin Zhang"]
+license = "CC-BY-4.0"
+editions = ["zh", "en"]
+date = "2026-11-22"
+[book.title]
+zh = "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)"
+en = "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)"
+[outputs]
+html = true
+pdf = ["academic"]
+epub = true
+[mathesis]
+work = "noe-2013-a222759-prime-cube-growth"
+version = 2
+source_title = "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)"

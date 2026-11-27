@@ -1,0 +1,23 @@
+{
+  "schema": "mathesis.collection-history.v1",
+  "sha256": {
+    "versions/v2/.mathesis/generated.json": "278f7733e257b447fc0093fa4dfd5d373e7cc2300b6e7c23bd1c4e535d2ed97e",
+    "versions/v2/CHANGELOG.md": "1daa2cad513bd538c26fc4d202712037d92f96644f262af7afbd054edbe153b3",
+    "versions/v2/CITATION.cff": "c319db25d3e0f92fef2c8982cce5db8a8e6358464ae1a5e77bccb08b0898c73f",
+    "versions/v2/CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
+    "versions/v2/LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
+    "versions/v2/README.md": "b0a6c19347e484cc82ff3063df7aa35cc83a704c2df204044a32abdfab810c3f",
+    "versions/v2/formalization/nodes.json": "fba0f29ea279373b0fcc92a60b8b4771bd0232a4734c997eb37a36e73fa698be",
+    "versions/v2/manuscript/README.md": "006dbd7fb77635632f10e9cb4543a471f62f1fd8e095b29cce1a19da2c55581f",
+    "versions/v2/manuscript/manifest.json": "c21cff10c49d586cbe6a2d615922c715c22cff26bc3031e082bf0a9b13558042",
+    "versions/v2/manuscript/metadata.json": "e1f13494b381aef1ec8c0280254665025d3eec5414ee2af2e22d36b98775a1c8",
+    "versions/v2/manuscript/note.tex": "42efb1aba884102f83438652705a44b0cf7dc73db4c955561010a0f912d0ae73",
+    "versions/v2/manuscript/verification.json": "9df79a09f876f4cb42e5b4ee6426bfbdfe9e3ef26a89d41cda6ed5c01e562400",
+    "versions/v2/manuscript/verify.py": "09b11f790d7a380038c7f5c6a6651c00da8882f3df59a915715abe25f060d78a",
+    "versions/v2/paper.json": "2decdf8753847fbf0dab82704f14d2a41240d01cfa4f5b8fba4a700839d9edf0",
+    "versions/v2/paper.pdf": "e82fae5903b6f907149c354394752ba0f7558a979466d07a87300dbf38116f14",
+    "versions/v2/source.archive": "820679935ad7a8569e3e0a977378f9fde9553d96b1e7260c6047907bf48528fd"
+  },
+  "source_commit": "039b9fb5cb27a31b2149506af65f6da059443ed0",
+  "work": "noe-2013-a222759-prime-cube-growth"
+}

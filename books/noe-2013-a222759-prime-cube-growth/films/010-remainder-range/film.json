@@ -1,0 +1,27 @@
+{
+  "duration": "1:12",
+  "id": "010-remainder-range",
+  "lean": [],
+  "narration": {
+    "engine": "Kokoro-82M v1.0 (onnx)",
+    "language": "en",
+    "voice": "af_heart"
+  },
+  "outputs": {
+    "cover": "noe-2013-a222759-prime-cube-growth_010_cover.jpg",
+    "narrated_720p": "noe-2013-a222759-prime-cube-growth_010_720p_narrated.mp4"
+  },
+  "publication_basis": "pinned",
+  "released": "2026-11-24",
+  "resolution": "1280x720@30",
+  "style": "trureturing cyberpunk · deterministic canvas",
+  "subject": "https://doi.org/10.5281/zenodo.24405795",
+  "subtitles": [
+    "zh",
+    "en"
+  ],
+  "summary": "A remainder range, two small-prime corrections, and the jump from two to three exceptions at 125.",
+  "summary_zh": "从余数的范围和两个小素数的修正，看到例外数如何在 125 从二跃升到三。",
+  "title": "The remainder range",
+  "title_zh": "余数的范围"
+}

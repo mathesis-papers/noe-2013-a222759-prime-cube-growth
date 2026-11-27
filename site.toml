@@ -1,0 +1,14 @@
+[site]
+repo = "mathesis-papers/noe-2013-a222759-prime-cube-growth"
+base_url = "https://papers.trureturing.org/noe-2013-a222759-prime-cube-growth/"
+post_build = ["python3", "-c", "from pathlib import Path\nimport runpy\nscript = Path(\"docs/layer-mathesis/scripts/site.py\")\nif script.is_file():\n    runpy.run_path(str(script), run_name=\"__main__\")\nelse:\n    print(\"Mathesis post-build skipped: layer script is absent from repository being built\")\n"]
+languages = ["zh", "en"]
+[site.title]
+zh = "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)"
+en = "Exact counts and sharp growth for OEIS A222759, first comment (12 March 2013): extending Glaisher (1900)"
+[trureturing]
+repo = "the-omega-institute/trureturing"
+branch = "dev"
+[books]
+order = ["noe-2013-a222759-prime-cube-growth"]
+hide = []
